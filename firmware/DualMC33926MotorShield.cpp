@@ -1,4 +1,5 @@
 #include "DualMC33926MotorShield/DualMC33926MotorShield.h"
+#include <application.h>
 
 // Constructors ////////////////////////////////////////////////////////////////
 
