@@ -1,7 +1,7 @@
 {
-  "name": "uber-library-example",
-  "author": "Joe Goggins <joe@spark.io>",
+  "name": "dual-mc33926-motor-shield",
+  "author": "Geoff Harris",
   "license": "MIT",
-  "version": "0.0.10",
-  "description": "A simple library that illustrates coding conventions of a Spark Library"
+  "version": "0.0.1",
+  "description": "Library to use Pololu Dual MC33926 Motor Driver Shield"
 }
