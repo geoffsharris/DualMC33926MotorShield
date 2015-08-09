@@ -1,7 +1,7 @@
 #ifndef DualMC33926MotorShield_h
 #define DualMC33926MotorShield_h
 
-
+#include <application.h>
 
 class DualMC33926MotorShield
 {
