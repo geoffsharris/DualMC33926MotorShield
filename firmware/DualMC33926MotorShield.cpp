@@ -5,7 +5,7 @@
 
 DualMC33926MotorShield::DualMC33926MotorShield()
 {
-  //Pin map
+  //Default Pin map
   _EN = D3;
   _M1IN1 = D0;
   _M1IN2 = D1;
@@ -15,13 +15,6 @@ DualMC33926MotorShield::DualMC33926MotorShield()
   _M1FB = A0; 
   _M2FB = D6;
 }
-
-(unsigned char M1IN1, unsigned char M1IN2, unsigned char M1FB,
-                           unsigned char M2IN1, unsigned char M2IN2, unsigned char M2FB,
-                           unsigned char EN, unsigned char nSF); // User-defined pin selection. 
-
-
-
 
 
 DualMC33926MotorShield::DualMC33926MotorShield(unsigned char M1IN1, unsigned char M1IN2, unsigned char M1FB,
