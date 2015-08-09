@@ -105,14 +105,14 @@ void DualMC33926MotorShield::setSpeeds(int m1Speed, int m2Speed)
 }
 
 // Return motor 1 current value in milliamps.
-unsigned float DualMC33926MotorShield::getM1CurrentMilliamps()
+float DualMC33926MotorShield::getM1CurrentMilliamps()
 {
   // 5V / 1024 ADC counts / 525 mV per A = 9 mA per count
   return analogRead(_M1FB) * 1.5244;
 }
 
 // Return motor 2 current value in milliamps.
-unsigned float DualMC33926MotorShield::getM2CurrentMilliamps()
+float DualMC33926MotorShield::getM2CurrentMilliamps()
 {
   // 5V / 1024 ADC counts / 525 mV per A = 9 mA per count
   return analogRead(_M2FB) * 1.5244;
