@@ -8,11 +8,11 @@ DualMC33926MotorShield::DualMC33926MotorShield()
   _EN = D3;
   _M1IN1 = D0;
   _M1IN2 = D1;
-  _M2IN1;
-  _M2IN2;
+  _M2IN1 = D4;
+  _M2IN2 = D5;
   _nSF = D2;
   _M1FB = A0; 
-  _M2FB;
+  _M2FB = D6;
 }
 
 (unsigned char M1IN1, unsigned char M1IN2, unsigned char M1FB,
