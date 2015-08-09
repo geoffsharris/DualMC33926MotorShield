@@ -17,8 +17,8 @@ class DualMC33926MotorShield
     void setM1Speed(int speed); // Set speed for M1.
     void setM2Speed(int speed); // Set speed for M2.
     void setSpeeds(int m1Speed, int m2Speed); // Set speed for both M1 and M2.
-    unsigned float getM1CurrentMilliamps(); // Get current reading for M1. 
-    unsigned float getM2CurrentMilliamps(); // Get current reading for M2.
+    float getM1CurrentMilliamps(); // Get current reading for M1. 
+    float getM2CurrentMilliamps(); // Get current reading for M2.
     unsigned char getFault(); // Get fault reading.
     
   private:
