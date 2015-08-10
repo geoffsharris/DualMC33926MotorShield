@@ -61,14 +61,18 @@ void DualMC33926MotorShield::setM1Speed(int speed)
     reverse = 1;  // Preserve the direction
   }
   if (speed > 255)  // Max PWM dutycycle
-    speed = 255;
+    {speed = 255;}
     
-  if (reverse)
+  if (reverse == 1)
+  {
     analogWrite(_M1IN2,0);
     analogWrite(_M1IN1,speed);
+  }
   else
+  {
     analogWrite(_M1IN1,0);
     analogWrite(_M1IN2,speed);
+  }
 }
 
 // Set speed for motor 2, speed is a number betwenn -400 and 400
@@ -82,14 +86,18 @@ void DualMC33926MotorShield::setM2Speed(int speed)
     reverse = 1;  // Preserve the direction
   }
   if (speed > 255)  // Max PWM dutycycle
-    speed = 255;
+    {speed = 255;}
     
-  if (reverse)
+  if (reverse ==1)
+  {
     analogWrite(_M2IN2,0);
     analogWrite(_M2IN1,speed);
+  }
   else
+  {
     analogWrite(_M2IN1,0);
     analogWrite(_M2IN2,speed);
+  }
 }
 
 // Set speed for motor 1 and 2
