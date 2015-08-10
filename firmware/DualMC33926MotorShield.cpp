@@ -64,11 +64,11 @@ void DualMC33926MotorShield::setM1Speed(int speed)
     speed = 255;
     
   if (reverse)
-    digitallWrite(_M1IN2,LOW);
-    digitalWrite(_M1IN1,HIGH);
+    analogWrite(_M1IN2,0);
+    analogWrite(_M1IN1,speed);
   else
-    digitallWrite(_M1IN1,LOW);
-    digitalWrite(_M1IN2,HIGH);
+    analogWrite(_M1IN1,0);
+    analogWrite(_M1IN2,speed);
 }
 
 // Set speed for motor 2, speed is a number betwenn -400 and 400
@@ -85,11 +85,11 @@ void DualMC33926MotorShield::setM2Speed(int speed)
     speed = 255;
     
   if (reverse)
-    analoglWrite(_M2IN2,0);
-    analoglWrite(_M2IN1,speed);
+    analogWrite(_M2IN2,0);
+    analogWrite(_M2IN1,speed);
   else
-    analoglWrite(_M2IN1,0);
-    analoglWrite(_M2IN2,speed);
+    analogWrite(_M2IN1,0);
+    analogWrite(_M2IN2,speed);
 }
 
 // Set speed for motor 1 and 2
