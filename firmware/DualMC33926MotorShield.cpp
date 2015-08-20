@@ -1,6 +1,7 @@
 #include "application.h"
 #include "DualMC33926MotorShield.h"
-
+// creates object called motor that can be used to call public functions
+// call motor.init() in setup() to map and define input and output pins
 
 // Constructors ////////////////////////////////////////////////////////////////
 
