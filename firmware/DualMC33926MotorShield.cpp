@@ -24,7 +24,6 @@ DualMC33926MotorShield::DualMC33926MotorShield(unsigned char M1IN1, unsigned cha
                            unsigned char EN, unsigned char nSF)
 {
   //Pin map set manually if default not desired
-  //PWM1 and PWM2 cannot be remapped because the library assumes PWM is on timer1
   _EN = EN;
   _M1IN1 = M1IN1;
   _M1IN2 = M1IN2;
