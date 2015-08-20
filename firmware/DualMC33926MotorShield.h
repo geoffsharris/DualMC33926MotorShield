@@ -32,4 +32,6 @@ class DualMC33926MotorShield
     unsigned char _M2FB;
 };
 
+extern DualMC33926MotorShield motor;
+
 #endif
