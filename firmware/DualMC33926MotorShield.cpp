@@ -4,7 +4,7 @@
 
 // Constructors ////////////////////////////////////////////////////////////////
 
-DualMC33926MotorShield::DualMC33926MotorShield()
+DualMC33926MotorShield::DualMC33926MotorShield() // called to set up pin map for motor functions
 {
   //Default Pin map
   _EN = D3;
@@ -22,7 +22,7 @@ DualMC33926MotorShield::DualMC33926MotorShield(unsigned char M1IN1, unsigned cha
                            unsigned char M2IN1, unsigned char M2IN2, unsigned char M2FB,
                            unsigned char EN, unsigned char nSF)
 {
-  //Pin map
+  //Pin map set manually if default not desired
   //PWM1 and PWM2 cannot be remapped because the library assumes PWM is on timer1
   _EN = EN;
   _M1IN1 = M1IN1;
@@ -37,7 +37,7 @@ DualMC33926MotorShield::DualMC33926MotorShield(unsigned char M1IN1, unsigned cha
 // Public Methods //////////////////////////////////////////////////////////////
 void DualMC33926MotorShield::init()
 {
-// Define pinMode for the pins and set the frequency for timer1.
+// Define pinMode for the pins, called as part of setup in main program
 
   pinMode(_M1IN1,OUTPUT);
   pinMode(_M1IN2,OUTPUT);
@@ -50,7 +50,7 @@ void DualMC33926MotorShield::init()
   pinMode(_nSF,INPUT);
 
 }
-// Set speed for motor 1, speed is a number betwenn -400 and 400
+// Set speed for motor 1, speed is a number betwenn -400 and 400, 0 stops motor
 void DualMC33926MotorShield::setM1Speed(int speed)
 {
   unsigned char reverse = 0;
@@ -75,7 +75,7 @@ void DualMC33926MotorShield::setM1Speed(int speed)
   }
 }
 
-// Set speed for motor 2, speed is a number betwenn -400 and 400
+// Set speed for motor 2, speed is a number betwenn -400 and 400, 0 stops motor
 void DualMC33926MotorShield::setM2Speed(int speed)
 {
   unsigned char reverse = 0;
@@ -110,14 +110,14 @@ void DualMC33926MotorShield::setSpeeds(int m1Speed, int m2Speed)
 // Return motor 1 current value in milliamps.
 float DualMC33926MotorShield::getM1CurrentMilliamps()
 {
-  // 5V / 1024 ADC counts / 525 mV per A = 9 mA per count
+  // 525 mV per A = 1.524 mA per count
   return analogRead(_M1FB) * 1.5244;
 }
 
 // Return motor 2 current value in milliamps.
 float DualMC33926MotorShield::getM2CurrentMilliamps()
 {
-  // 5V / 1024 ADC counts / 525 mV per A = 9 mA per count
+ // 525 mV per A = 1.524 mA per count
   return analogRead(_M2FB) * 1.5244;
 }
 
@@ -126,3 +126,5 @@ unsigned char DualMC33926MotorShield::getFault()
 {
   return !digitalRead(_nSF);
 }
+
+ DualMC33926MotorShield motor = DualMC33926MotorShield(); // make instance "motor" to be used in program
