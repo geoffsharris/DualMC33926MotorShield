@@ -110,15 +110,15 @@ void DualMC33926MotorShield::setSpeeds(int m1Speed, int m2Speed)
 // Return motor 1 current value in milliamps.
 float DualMC33926MotorShield::getM1CurrentMilliamps()
 {
-  // 525 mV per A = 1.524 mA per count
-  return analogRead(_M1FB) * 1.5244;
+   // Particle is 3.3v/ 4096 = .8057mV/count, motor FB is 525 mV/1000mA => 1.5346 mA per count
+  return analogRead(_M1FB) * 1.5346;
 }
 
 // Return motor 2 current value in milliamps.
 float DualMC33926MotorShield::getM2CurrentMilliamps()
 {
- // 525 mV per A = 1.524 mA per count
-  return analogRead(_M2FB) * 1.5244;
+ // Particle is 3.3v/ 4096 = .8057mV/count, motor FB is 525 mV/1000mA => 1.5346 mA per count
+  return analogRead(_M2FB) * 1.5346;
 }
 
 // Return error status
