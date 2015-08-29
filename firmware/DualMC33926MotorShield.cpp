@@ -7,15 +7,15 @@
 
 DualMC33926MotorShield::DualMC33926MotorShield() // called to set up pin map for motor functions
 {
-  //Default Pin map
-  _EN = D3;
-  _M1IN1 = D0;
-  _M1IN2 = D1;
-  _M2IN1 = D4;
-  _M2IN2 = D5;
-  _nSF = D2;
+  //Default Pin map these should be set differently for the core vs. photon
+  _EN = D4;
+  _M1IN1 = D0; // PWM
+  _M1IN2 = D1; // PWM
+  _M2IN1 = D2; // PWM
+  _M2IN2 = D3; // PWM
+  _nSF = D5;
   _M1FB = A0; 
-  _M2FB = D6;
+  _M2FB = A1;
 }
 
 
