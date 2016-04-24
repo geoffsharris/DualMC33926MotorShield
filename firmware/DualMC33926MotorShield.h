@@ -20,6 +20,8 @@ class DualMC33926MotorShield
     float getM1CurrentMilliamps(); // Get current reading for M1. 
     float getM2CurrentMilliamps(); // Get current reading for M2.
     unsigned char getFault(); // Get fault reading.
+    void enable();
+    void disable();
     
   private:
     unsigned char _EN;
