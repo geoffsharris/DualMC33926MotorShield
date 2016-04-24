@@ -127,4 +127,17 @@ unsigned char DualMC33926MotorShield::getFault()
   return !digitalRead(_nSF);
 }
 
+void DualMC33926MotorShield::enable()
+{
+// enable motor
+  digitalWrite(_EN,HIGH); // default is on
+}
+
+void DualMC33926MotorShield::disable()
+{
+// enable motor
+  digitalWrite(_EN,LOW); // default is on
+}
+
+
  DualMC33926MotorShield motor = DualMC33926MotorShield(); // make instance "motor" to be used in program
