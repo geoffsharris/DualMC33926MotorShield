@@ -135,7 +135,7 @@ void DualMC33926MotorShield::enable()
 
 void DualMC33926MotorShield::disable()
 {
-// enable motor
+// disable motor
   digitalWrite(_EN,LOW); // default is on
 }
 
