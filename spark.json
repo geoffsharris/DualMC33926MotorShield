@@ -1,7 +1,0 @@
-{
-  "name": "DualMC33926MotorShield",
-  "author": "Geoff Harris",
-  "license": "MIT",
-  "version": "0.0.1",
-  "description": "Library to use Pololu Dual MC33926 Motor Driver Shield"
-}
